@@ -17,7 +17,7 @@ body {
     animation-direction: alternate-reverse;
     box-sizing: border-box;
     height: 500px;
-    width: 500px;
+    width: 510px;
 
     background: radial-gradient(circle, red, blue);
 
