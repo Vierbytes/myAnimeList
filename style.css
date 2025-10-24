@@ -1,3 +1,63 @@
 body {
-    background: linear-gradient(to bottom, rgb(138, 43, 226), rgb(221, 161, 161) 25%, rgb(215, 141, 211) 75% )!important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+
+    background: linear-gradient(36deg, rgb(138, 43, 226), rgb(221, 161, 161) 25%, rgb(215, 141, 211) 75% )!important;
+}
+
+.blocks {
+    
+    /* height: 100%; */
+    /* width: 100%; */
+    gap: 100px;
+    animation-name: dizzy;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    box-sizing: border-box;
+    height: 500px;
+    width: 500px;
+
+    background: radial-gradient(circle, red, blue);
+
+}
+
+.gradient-text {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    animation-name: dizzy;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    /* Enable background clipping */
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Add these prefixes */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+@keyframes dizzy {
+    0%{
+        border-radius: 50%;
+    }
+    25%{
+        scale: 1;
+    }
+    50%{
+        scale: 2;
+    }
+    75%{
+        scale: 3;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 20%;
+    }
 }
